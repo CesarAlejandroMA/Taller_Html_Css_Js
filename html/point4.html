@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Punto 4</title>
+    <link rel="stylesheet" href="../css/point_4.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Aprobar materia</h1>
+        <h3>Realizar una aplicación web que permita saber si un usuario pasa o pierde una materia. </h3>
+        <p>INGRESE EL NOMBRE DE LA PERSONA</p>
+        <input type="text" id="namePerson" name="nombre">
+        <p>INGRESE LA MATERIA A EVALUAR</p>
+        <input type="text" id="nameSubject" name="edad" >
+        <p>PRIMERA CALIFICACIÓN</p>
+        <input type="number" id="note1" name="note1" min="0" max="5" step="0.1">
+        <p>SEGUNDA CALIFICACIÓN</p>
+        <input type="number" id="note2" name="note2" min="0" max="5" step="0.1">
+        <p>TERCERA CALIFICACIÓN</p>
+        <input type="number" id="note3" name="note3" min="0" max="5" step="0.1">
+        <br>
+        <button onclick="calculateAge()">Calcular</button>
+        <p class="result" id="result"></p>
+
+    </div>
+
+    <div>
+        <a href="point5.html" class="next">
+            <span>Siguiente</span>
+        </a>
+        <a href="point3.html" class="goback">
+            <span>Regresar</span>
+        </a>
+    </div>
+
+
+    <script src="../js/point_4.js"></script>
+
+</body>
+
+</html>

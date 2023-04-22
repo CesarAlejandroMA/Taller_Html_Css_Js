@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    background-image: url(../media/page_3.jpg);
+    /* background-size: 100vw 100vh; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+body:before{
+    content: "";
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #3b5155, #5a8d63);
+    opacity: 0.5;
+    z-index: -3;
+}
+
+.container{
+    color: antiquewhite;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(5, 7, 12, 0.40);
+}
+
+h1{
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.container h3{
+    font-style: italic;
+    font-size: 20px;
+}
+
+input{
+    width: 80%;
+    height: 40px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: antiquewhite;
+    background-color: #111;
+}
+
+.next{
+    text-decoration: none;
+    border: 0;
+    background-image: linear-gradient(
+        150deg, 
+        #9500ff,
+        #09f,
+        #00ddff
+        );
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    font-size: 18px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.next span{
+    background-color: #111;
+    padding: 16px 24px;
+    border-radius: 6px;
+    transition: .3s;
+}
+
+.next:hover span{
+    background: none;
+}
+
+.next:active{
+    transform: scale(0.9);
+}
+
+.goback{
+    text-decoration: none;
+    border: 0;
+    background-image: linear-gradient(
+        150deg, 
+        #9500ff,
+        #09f,
+        #00ddff
+        );
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    font-size: 18px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.goback span{
+    background-color: #111;
+    padding: 16px 24px;
+    border-radius: 6px;
+    transition: .3s;
+}
+
+.goback:hover span{
+    background: none;
+}
+
+.goback:active{
+    transform: scale(0.9);
+}
