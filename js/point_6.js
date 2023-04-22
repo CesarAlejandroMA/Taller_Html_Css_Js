@@ -4,6 +4,9 @@ function buscar(){
     var text = document.getElementById("texto").value;
     var result = document.getElementById("result");
 
+    credencial = credencial.toLowerCase();
+    text = text.toLowerCase();
+
     if(!credencial || !text){
         result.innerHTML = "";
         alert("No pueden hacer campos sin completar");
@@ -12,12 +15,12 @@ function buscar(){
         let arrayText = [];
         
         //Guardar cada letra del credencial en un espacio del arreglo arrayCred
+
         for(var i = 0; i < credencial.length; i++){
             arrayCred.push(credencial[i]);
         }
-    
+
         //AJUSTAR EL FORMATO DE LA CREDENCIAL
-    
         //Eliminar espacios del arreglo antes del primer caracter
         for(var i = 0; i < credencial.length; i++){
             if(arrayCred[0] == ' '){
@@ -39,9 +42,9 @@ function buscar(){
         //Eliminar ultima posición del arreglo si es un espacio
         let posicionCred = arrayCred.length-1;
         if(arrayCred[posicionCred] == " "){
-            arrayCred.splice(posicionCred,1);
+            arrayCred.splice(posicionCred,0);
         }
-    
+
         //AJUSTAR EL FORMATO DEL TEXTO
     
         //Guardar cada letra del texto en un espacio del arreglo arrayText
@@ -72,7 +75,7 @@ function buscar(){
         if(arrayText[posicionText] == " "){
             arrayText.splice(posicionText,1);
         }
-    
+
         //BUSQUEDA DEL TEXTO
         var j = 0;
         var limite = 0;
@@ -83,7 +86,7 @@ function buscar(){
             if(index <= limite){
                 sumatoria = 0;
                 for(var k = 0; k < arrayCred.length; k++){
-                    if(arrayText[k+index] == arrayCred[k]){
+                    if(arrayText[k+index] == arrayCred[k]){ //(arrayText[k+index] == arrayCred[k])
                         sumatoria ++;
                     }
                 }
